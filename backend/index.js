@@ -22,7 +22,9 @@ app.get("/", (req, res) => {
 app.use(cors({
         origin: [
     "http://localhost:5173",
-    "http://localhost:5174"
+    "http://localhost:5174",
+    "https://stockforu-frontend.netlify.app",
+    "https://stockforu-dashboard.netlify.app"
     ],
     credentials: true,
 }));

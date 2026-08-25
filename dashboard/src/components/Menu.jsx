@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link ,useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
+
 import axios from "axios";
 import './Menu.css';
 import { useEffect } from "react";
@@ -72,7 +72,7 @@ const Menu = () => {
 
 const handleLogOut = () => {
   
-  window.location.href = "http://localhost:5173/login";
+  window.location.href = "https://stockforu-frontend.netlify.app/login";
 };
 
   return (
