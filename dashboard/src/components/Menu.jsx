@@ -72,7 +72,7 @@ const Menu = () => {
 
 const handleLogOut = () => {
   
-  window.location.href = "https://stockforu-frontend.netlify.app";
+  window.location.href = "https://stockforu-frontend.netlify.app/login";
 };
 
   return (
