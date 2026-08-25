@@ -1,0 +1,120 @@
+/* Main page */
+.form_container {
+    width: 100%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* Heading */
+.form_container h2 {
+    margin: 0 0 35px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #424242;
+}
+
+/* Form */
+.form_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Input group */
+.form_container form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.form_container label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #424242;
+    font-weight: 500;
+}
+
+/* Inputs */
+.form_container input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #424242;
+    outline: none;
+    box-sizing: border-box;
+    transition: border 0.2s ease;
+}
+
+.form_container input::placeholder {
+    color: #999;
+}
+
+.form_container input:focus {
+    border-color: #387ed1;
+}
+
+/* Signup button */
+.form_container button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 3px;
+    background-color: #387ed1;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form_container button:hover {
+    background-color: #2f6db5;
+}
+
+/* Login text */
+.form_container span {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.form_container span a {
+    color: #387ed1;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.form_container span a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .form_container {
+        width: 90%;
+        margin: 40px auto;
+        padding: 30px 25px;
+        border: none;
+    }
+
+    .form_container h2 {
+        font-size: 24px;
+    }
+}
+
+.signup_page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}

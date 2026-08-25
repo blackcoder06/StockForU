@@ -1,0 +1,22 @@
+.nav-link{
+    margin-left:40px ;
+    color: #424242;
+    font-size: 15px;
+}
+@media(max-width: 991px) {
+    .nav-link{
+        margin-left: 0;
+    }
+}
+.logo {
+    width: 190px;
+}
+
+.navbar{
+    padding:10px 0;
+}
+
+.nav-link:hover{
+    color: #387ed1;
+}
+

@@ -1,0 +1,121 @@
+/* Buy Window */
+#buy-window {
+  width: 520px;
+  background: #fff;
+  padding: 22px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 250px;
+  left: 320px;
+  z-index: 1000;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Qty and Price container */
+.regular-order {
+  padding-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.inputs fieldset {
+  flex: 1;
+  height: 70px;
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+align-items: center;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+}
+
+.inputs legend {
+  padding: 0 5px;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.inputs input {
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+}
+
+/* Focus effect */
+.inputs fieldset:focus-within {
+  border-color: #387ed1;
+  box-shadow: 0 0 0 1px rgba(56, 126, 209, 0.15);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.buttons span {
+  font-size: 13px;
+  color: #777;
+}
+
+.buttons > div {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 28px;
+  border-radius: 3px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-blue {
+  background: #387ed1;
+  color: white;
+}
+
+.btn-blue:hover {
+  background: #2565ad;
+}
+
+.btn-grey {
+  background: #e0e0e0;
+  color: #444;
+}
+
+.btn-grey:hover {
+  background: #d0d0d0;
+}
+
+.btn-red {
+    background-color: #e53935;
+    color: white;
+    border: none;
+}
+
+.btn-red:hover {
+    background-color: #c62828;
+}

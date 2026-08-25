@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240">
+  <defs>
+    <linearGradient id="iconBlue" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1267E8"/>
+      <stop offset="100%" stop-color="#4DA3FF"/>
+    </linearGradient>
+    <linearGradient id="textBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0757C9"/>
+      <stop offset="100%" stop-color="#1677F5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(35,35)">
+    <path d="M18 150
+             C18 80 42 38 78 38
+             C118 38 150 78 168 150
+             Z"
+          fill="url(#iconBlue)"/>
+    <path d="M92 18
+             L155 18
+             L155 82
+             C139 60 119 40 92 18 Z"
+          fill="#72B5FF"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="245" y="158"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="112"
+        font-weight="700"
+        letter-spacing="-5"
+        fill="url(#textBlue)">stockForU</text>
+</svg>

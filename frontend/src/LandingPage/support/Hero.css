@@ -1,0 +1,10 @@
+#supportHero{
+    background-color: rgb(56, 126, 209);
+    color: white;
+}
+
+#SupportRapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0  100px;
+}

@@ -1,0 +1,12 @@
+.Social {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+
+}
+
+.Social li{
+    list-style: none;
+}
