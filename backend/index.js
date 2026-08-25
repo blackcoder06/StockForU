@@ -20,10 +20,18 @@ app.get("/", (req, res) => {
     res.send("Backend is running successfully!");
 });
 app.use(cors({
-        origin: true,
+        origin: [
+    "http://localhost:5173",
+    "http://localhost:5174"
+    ],
     credentials: true,
 }));
 app.use(bodyParser.json());
+app.use(cookieParser());
+
+app.use(express.json());
+
+
 
 // app.get('/addHoldings' , async(req , res) => {
 //     let tempHoldings = [
@@ -239,8 +247,5 @@ app.listen(PORT, ()=>{
     console.log("App is started");
 });
 
-app.use(cookieParser());
-
-app.use(express.json());
-
 app.use("/" , authRoute);
+
