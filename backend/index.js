@@ -16,11 +16,11 @@ const PORT = process.env.PORT || 3002;
 const url = process.env.MONGO_URL;
 
 const app = express();
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully!");
+});
 app.use(cors({
-        origin: [
-        "http://localhost:5173",
-        "http://localhost:5174"
-        ],
+        origin: true,
     credentials: true,
 }));
 app.use(bodyParser.json());
