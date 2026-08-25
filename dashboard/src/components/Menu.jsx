@@ -1,11 +1,63 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import axios from "axios";
 import '../index.css';
+import { useEffect } from "react";
+const API_URL = "https://stockforu-backend-ashwin.onrender.com";
 
 const Menu = () => {
   const [selectedMenu , setSelectedMenu] = useState(0);
   const [isProfilDropdownOpen , setisProfilDropdownOpen] = useState(false);
+
+  const[cookies, removeCookie] = useCookies(["token"]);
+  const [username, setUsername] = useState("");
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const verifyCookie = async () => {
+      try{
+        // if(!cookies.token) {
+        //   window.location.href = "http://localhost:5173/login";
+        //   console.log("No token found in dashboard");
+        //   return;
+        // }
+
+        //   console.log("Token found. Verifying...");
+        const { data } = await axios.post(
+          `${API_URL}/`,
+          {},
+          {
+            withCredentials: true,
+          }
+        );
+        console.log("Backend response:", data);
+        // const {status , user } = data;
+        // if(status) {
+        //   console.log("Authentication successful:", user);
+        //   setUsername(user);
+        // } else {
+        //   removeCookie("token");
+        //   // window.location.href = "http://localhost:5173/login";
+        //   console.log("Backend verification failed:", data);
+        // }
+          if (data.status) {
+        setUsername(data.user);
+        } else {
+        console.log("User not authenticated");
+        }
+      } catch (error) {
+        console.error("Authentication error:" , error);
+
+        // removeCookie("token");
+        // window.location.href = "http://localhost:5173/login";
+
+      }
+    };
+    verifyCookie();
+
+  }, [cookies, removeCookie]);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -19,7 +71,8 @@ const Menu = () => {
   const activeMenuClass = "menu selected";
 
 const handleLogOut = () => {
-  window.location.href = "http://localhost:5173";
+  removeCookie("token");
+  window.location.href = "http://localhost:5173/login";
 };
 
   return (
@@ -79,10 +132,10 @@ const handleLogOut = () => {
     className="profile d-flex align-items-center mb-4"
     onClick={handleProfilClick}
   >
-    <div className="avatar">ZU</div>
+    <div className="avatar">{username ? username.substring(0, 2).toUpperCase() : "US"}</div>
 
     <span className="username mb-0">
-      USERID
+      {username || "Loading..."}
     </span>
   </div>
 

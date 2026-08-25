@@ -36,7 +36,7 @@ function SignUp() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const { data } = await axios.post("http://localhost:3002/signup" , {
+            const { data } = await axios.post("https://stockforu-backend-ashwin.onrender.com/signup" , {
                 ...inputValue,
             },
         {withCredentials: true});
