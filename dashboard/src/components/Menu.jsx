@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link ,useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import '../index.css';
+import './Menu.css';
 import { useEffect } from "react";
 const API_URL = "https://stockforu-backend-ashwin.onrender.com";
 
