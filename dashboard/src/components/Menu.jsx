@@ -11,12 +11,12 @@ const Menu = () => {
   const [selectedMenu , setSelectedMenu] = useState(0);
   const [isProfilDropdownOpen , setisProfilDropdownOpen] = useState(false);
 
-  const[cookies, removeCookie] = useCookies(["token"]);
+  // const[cookies, removeCookie] = useCookies(["token"]);
   const [username, setUsername] = useState("");
 
   const navigate = useNavigate();
   useEffect(() => {
-    const verifyCookie = async () => {
+    const verifyUser = async () => {
       try{
         // if(!cookies.token) {
         //   window.location.href = "http://localhost:5173/login";
@@ -55,9 +55,9 @@ const Menu = () => {
 
       }
     };
-    verifyCookie();
+    verifyUser();
 
-  }, [cookies, removeCookie]);
+  }, []);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -71,7 +71,7 @@ const Menu = () => {
   const activeMenuClass = "menu selected";
 
 const handleLogOut = () => {
-  removeCookie("token");
+  
   window.location.href = "http://localhost:5173/login";
 };
 
